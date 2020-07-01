@@ -4,17 +4,31 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String direction = scanner.nextLine();
-        String inputStr = scanner.nextLine();
-        int shiftKey = scanner.nextInt();
+        String direction = "enc";
+        int key = 0;
+        String data = "";
+        if (args.length > 0) {
+            for (int i = 0; i < args.length; i+=2) {
+                switch (args[i]) {
+                    case "-key":
+                        key = Integer.parseInt(args[i+1]);
+                        break;
+                    case "-data":
+                        data = args[i+1];
+                        break;
+                    case "-mode":
+                        direction = args[i+1];
+                        break;
+                }
+            }
+        }
 
         switch (direction) {
             case "enc":
-                System.out.println(encryption(inputStr, shiftKey));
+                System.out.println(encryption(data, key));
                 break;
             case "dec":
-                System.out.println(decryption(inputStr, shiftKey));
+                System.out.println(decryption(data, key));
                 break;
             default:
                 System.out.println("Unknown operation!");

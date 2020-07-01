@@ -75,6 +75,13 @@ files:
         }
     }
   learner_created: false
+- name: src/encryptdecrypt/Main.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/46/stages/248/implement
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/46/stages/248/implement">JetBrains
+    Academy</a>
+  time: Wed, 01 Jul 2020 18:24:04 UTC
 record: -1
